@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Inter:wght@300;400;500;700&family=Karla&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template: 71px 1fr 30px / 1fr;
+}
+
+.grid-header{
+    display: grid;
+    grid-template: 40px / repeat(12,1fr);
+    grid-template-areas: ". area1 . . area2 area2 area2 area2 area2 . . area3";
+    padding: 15px 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.grid-header-item-1{
+    display: flex;
+    align-items: center;
+    grid-area: area1;
+}
+
+h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.grid-header-item-2{
+    grid-area: area2;
+    display: flex;
+    align-items: center;
+}
+
+.grid-header-item-2 input{
+    width: 100%;
+    padding:10px;
+    background: #FAFAFA;
+    border-radius: 5px;
+    border: 0.3px solid #222222;
+}
+
+.grid-header-item-2 input::placeholder{
+    color: black;
+}
+
+.grid-header-item-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area3;
+}
+
+.grid-header-item-3 img{
+        width: 50px;
+        border-radius: 25px;
+}
+
+main{
+    display: grid;
+    background-color: #FAFAFA;
+    grid-template: 40px 1fr 40px repeat(7,1fr) repeat(2,55px)/ repeat(12,1fr);
+    grid-template-areas: 
+    ". . . . . . . . . . . ."
+    ". historias historias historias historias historias historias . social social social ."
+    ". . . . . . . . social social social ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . social social social ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". publicacion publicacion publicacion publicacion publicacion publicacion . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ;
+}
+
+.contenedor-historias{
+    display: flex;
+    justify-content: space-between;
+    grid-area: historias;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+    border-radius: 5px;
+}
+
+.contenedor-historias>img{
+    border-radius: 35px;
+}
+
+.contenedor-publicacion{
+    grid-area: publicacion;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+    border-radius: 5px;
+}
+
+.publicacion-usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.publicacion-usuario>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.publicacion-usuario>div>img{
+    width: 50px;
+    border-radius: 25px;
+}
+
+.publicacion-usuario>div>h2{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.fa-ellipsis{
+    font-size: 25px;
+}
+
+.publicacion-contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 56px;
+    gap: 10px;
+}
+
+.publicacion-pie{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.interacciones{
+    display: flex;
+    gap: 18px;
+}
+
+.fa-regular{
+    font-size: 25px;
+}
+
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comentarios p{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.ver-comentarios{
+    color: rgba(164, 155, 155, 1);
+}
+
+.nombre-usuario{
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.contenedor-social{
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.contenedor-cuenta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contenedor-cuenta>div{
+    display: flex;
+    gap: 13px;
+    padding-left: 6px;
+}
+
+.contenedor-cuenta>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 4px;
+}
+
+.contenedor-cuenta>div>img{
+    width: 50px;
+    border-radius: 25px;
+}
+
+.apodo-usuario{
+    font-weight: 500;
+    font-size: 10px;
+    color: rgba(128, 128, 128, 1);
+}
+
+.emoji-fantasma{
+    width: 10px;
+}
+
+.contenedor-cuenta>p , .usuario-sugerido>p{
+    font-size: 12px;
+    color: rgba(28, 160, 246, 1);
+}
+
+.contenedor-sugerencias{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedor-sugerencias>p{
+    font-weight: 700;
+    font-size: 10px;
+    color: rgba(128, 128, 128, 1);
+}
+
+.contenedor-usuarios-sugeridos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.usuario-sugerido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 12px;
+}
+
+.usuario-sugerido>div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.usuario-sugerido>div>img{
+    width: 30px;
+    border-radius: 25px;
+}
+
+footer{
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+@media (max-width:480px){
+    .grid-header{
+        grid-template-areas: "area1 . . . . . . . . . . area3";
+    }
+
+    .grid-header-item-2{
+        display: none;
+    }
+
+    main{
+        grid-template: 40px 1fr 40px repeat(5,1fr) repeat(2,10px) repeat(2,50px) / repeat(12,1fr);
+
+        grid-template-areas: 
+        ". . . . . . . . . . . ."
+        ". historias historias historias historias historias historias historias historias historias historias ."
+        ". . . . . . . . . . . ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion publicacion ."
+        ". . . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+        ;
+    }
+
+    .contenedor-historias{
+        padding: 20px 35px;
+    }
+
+    .contenedor-historias>img:nth-child(even){
+        display: none;
+    }
+
+    .contenedor-social{
+        display: none;
+    }
+
+    
+
+}
